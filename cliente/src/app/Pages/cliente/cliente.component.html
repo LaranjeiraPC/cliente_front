@@ -1,0 +1,12 @@
+<table>
+    <tr class="tr-topo">
+        <th id="id">Id</th>
+        <th id="nome">Nome</th>
+        <th id="idade">Idade</th>
+    </tr>
+    <tr *ngFor="let cli of _clienteList">
+        <td>{{cli.id}}</td>
+        <td>{{cli.nome}}</td>
+        <td>{{cli.idade}}</td>
+    </tr>
+</table>

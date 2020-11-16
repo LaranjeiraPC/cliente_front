@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.float_right{
+    float: right;
+}
+
+.container{
+    width: 95%;
+    float: left;
+    margin-left: 2.5%;
+}
+
+/*Configuração Tabela */
+
+table{
+    width: 100%;
+    margin-top: 1%;
+}
+
+tr{
+    text-align: center;
+}
+
+td{
+    color: rgb(41, 41, 41);
+}
+
+th{
+    color: white;
+}
+
+.tr-topo{
+    height: 30px;
+    background: deepskyblue;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
