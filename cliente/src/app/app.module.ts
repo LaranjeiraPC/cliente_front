@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu/menu.component';
 import { LogoComponent } from './menu/logo/logo.component';
 import { PrincipalComponent } from './Pages/principal/principal.component';
+import { UsuarioComponent } from './Pages/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PrincipalComponent } from './Pages/principal/principal.component';
     ClienteComponent,
     MenuComponent,
     LogoComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,

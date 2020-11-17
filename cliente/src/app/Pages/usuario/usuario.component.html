@@ -1,0 +1,11 @@
+<div class="background">
+
+    <div class="painel_senha">
+        <H1>Bem Vindo!</H1>
+        <input id="_usuario" class="campo-input" placeholder="Username" type="text" maxlength="200" (keyup)="verificarCampoUsuario($event.target.value)" />
+        <input id="_senha" class="campo-input" placeholder="Password" type="password" maxlength="200" (keyup)="verificarCampoSenha($event.target.value)" />
+        <p>{{_log}}</p>
+        <button (click)="autenticar()">LOGAR</button>
+    
+    </div>
+</div>

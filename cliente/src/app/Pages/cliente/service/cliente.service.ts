@@ -12,6 +12,7 @@ export class ClienteService {
   constructor(private http: HttpClient) { }
 
   private URL: string = ConfigGlassCliente.api.base_url + "cliente";
+  
   consultarListClientes(): Observable<Cliente[]>{
     return this.http.get<Cliente[]>(this.URL+"/consultaCliente");
   }

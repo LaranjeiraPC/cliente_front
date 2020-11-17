@@ -1,0 +1,41 @@
+.painel_senha{
+    width: 25%;
+    float: left;
+    margin-left: 35%;
+    margin-top: 15%;
+    height: auto;
+    background-color: white;
+    box-shadow: 10px 5px 5px grey;
+}
+
+.campo-input{
+    float: left;
+    width: 80%;
+    margin-left: 9%;
+}
+
+button{
+    float: right;
+    margin-top: 5%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+.background{
+    height: 94vh;
+    background-color: khaki;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    margin-top: 1%;
+}
+
+p{
+    color: red;
+    float: left;
+    margin-left: 9%;
+}
