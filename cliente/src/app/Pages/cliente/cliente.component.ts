@@ -14,6 +14,10 @@ export class ClienteComponent implements OnInit {
   ) { }
  
   _clienteList: Cliente[];
+  _colunasList: string[] = [];
+  _atributosList: string[] = [];
+  _colunasEditar: string[] = [];
+  _atributosEditar: string[] = [];
 
   ngOnInit() {
     this.consultarCliente();
@@ -23,7 +27,15 @@ export class ClienteComponent implements OnInit {
     let subscription = this._clienteService.consultarListClientes().subscribe(data => {
       subscription.unsubscribe();
       this._clienteList = data;
+      this.montarDadosTabela();
     });
+  }
+
+  montarDadosTabela(){
+    this._colunasList = ['Id', 'Nome', 'Idade'];
+    this._atributosList = ['id', 'nome', 'idade'];
+    this._colunasEditar = ['Nome', 'Idade'];
+    this._atributosEditar = ['nome', 'idade'];
   }
 
 }

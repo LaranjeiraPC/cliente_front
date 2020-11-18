@@ -1,4 +1,4 @@
-<table>
+<!-- <table>
     <tr class="tr-topo">
         <th id="id">Id</th>
         <th id="nome">Nome</th>
@@ -9,4 +9,14 @@
         <td>{{cli.nome}}</td>
         <td>{{cli.idade}}</td>
     </tr>
-</table>
+</table> -->
+
+ 
+<app-table 
+    [url]="'cliente'"
+    [data]="_clienteList"
+    [colunas]="_colunasList"
+    [atributos]="_atributosList"
+    [colunasEditar]="_colunasEditar"
+    [atributosEditar]="_atributosEditar">
+</app-table>

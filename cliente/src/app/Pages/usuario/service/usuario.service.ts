@@ -20,8 +20,9 @@ export class UsuarioService {
     return UsuarioService.observable;
   }
   
-  setAutenticar(autenticado: boolean){
+  setAutenticar(autenticado: boolean, nome: string){
     UsuarioService.usuario.autenticado = autenticado;
+    UsuarioService.usuario.usuario = nome;
     UsuarioService.observable.next(UsuarioService.usuario);  
   }
 

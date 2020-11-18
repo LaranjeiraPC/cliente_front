@@ -1,7 +1,7 @@
 export class Cliente {
 
     private _id: number;
-	private _nome: string;
+    private _nome: string;
     private _idade: string;
    
     public get id(): number {

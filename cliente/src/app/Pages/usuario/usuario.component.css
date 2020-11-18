@@ -12,17 +12,22 @@
     float: left;
     width: 80%;
     margin-left: 9%;
+    height: 34px;
 }
 
 button{
-    float: right;
+    float: left;
     margin-top: 5%;
-    margin-right: 1%;
-    margin-bottom: 1%;
+    margin-left: 9%;
+    margin-bottom: 4%;
+    width: 82%;
+    background-color: skyblue;
+    height: 30px;
+    border: transparent;
 }
 
 .background{
-    height: 94vh;
+    height: 99vh;
     background-color: khaki;
 }
 
@@ -38,4 +43,5 @@ p{
     color: red;
     float: left;
     margin-left: 9%;
+    width: 80%;
 }

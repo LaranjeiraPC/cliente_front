@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   }
 
   logout(){
-    this._usuarioService.setAutenticar(false);
+    this._usuarioService.setAutenticar(false, null);
   }
 
 }
