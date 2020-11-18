@@ -12,19 +12,19 @@ export class AppComponent implements OnInit, OnDestroy {
   usuarioSubscription: Subscription;
 
   private _logado: boolean = false;
-
+  
   constructor(
     private _usuarioService: UsuarioService
-  ){}
+  ) { }
 
   ngOnInit(): void {
-    this.usuarioSubscription = this._usuarioService.get().subscribe(data => { 
-     this._logado = data.autenticado;
+    this.usuarioSubscription = this._usuarioService.get().subscribe(data => {
+      this._logado = data.autenticado;
     });
   }
 
   ngOnDestroy(): void {
     this.usuarioSubscription.unsubscribe();
   }
-  
+
 }

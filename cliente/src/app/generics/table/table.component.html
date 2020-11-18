@@ -1,0 +1,16 @@
+<table>
+    <tr class="tr-topo">
+        <th id="coluna" *ngFor="let coluna of colunas">{{coluna}}</th>
+        <th id="editar"></th>
+    </tr>
+    <tr *ngFor="let d of data">
+        <td *ngFor="let atributo of atributos">{{d[atributo]}}</td>
+        <td>
+            <button class="button-editar" (click)="editarRegistro(d)">
+                <ng-container >
+                    <img alt="editar" class="icon-editar" src="./assets/edit.png"> 
+                </ng-container>
+            </button>
+        </td>
+    </tr>
+</table>

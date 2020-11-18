@@ -12,6 +12,7 @@ import { UsuarioComponent } from './Pages/usuario/usuario.component';
 import { TableComponent } from './generics/table/table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditarComponent } from './generics/editar/editar.component';
+import { AlertComponent } from './generics/alert/alert.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { EditarComponent } from './generics/editar/editar.component';
     UsuarioComponent,
     TableComponent,
     EditarComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,

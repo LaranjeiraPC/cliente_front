@@ -1,0 +1,24 @@
+<div>
+
+    <div class="title">
+        <p class="name-title">Editar</p>
+    </div>
+
+    <div class="campo" *ngFor="let coluna of _colunas; let i = index">
+        <p>{{coluna}}</p>
+
+        <input *ngIf="getType(i) == 'number'" class="input" value="{{_object ? (_object[i]): ''}}" type="number" id="i"
+            (keyup)="editObject($event.target.value, i)" />
+
+
+        <input *ngIf="getType(i) == 'campoTexto'" class="input" value="{{_object ? (_object[i]): ''}}" type="text" id="i"
+            (keyup)="editObject($event.target.value, i)" />
+
+
+    </div>
+
+    <div class="botoes">
+        <button (click)="voltar()">VOLTAR</button>
+        <button (click)="salvaRegistro()">SALVAR</button>
+    </div>
+</div>

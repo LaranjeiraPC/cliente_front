@@ -29,5 +29,17 @@ export class UsuarioService {
   autenticarUsuario(usuario: string, senha: string): Observable<any>{
     return this.http.get(this.URL+"/autenticar/" + usuario + "/" + senha);
   }
+
+  setAlert(status: string, message: string) {
+    UsuarioService.usuario.message = message;
+    UsuarioService.usuario.status = status;
+    UsuarioService.observable.next(UsuarioService.usuario);
+  }
+
+  setClean(){
+    UsuarioService.usuario.message = null;
+    UsuarioService.usuario.status = null;
+    UsuarioService.observable.next(UsuarioService.usuario); 
+  }
   
 }
