@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatButtonToggleModule, MatDialogModule, MatIconModule, MatSortModule, MatTableModule, MatTooltipModule } from '@angular/material';
+import { MatButtonModule, MatButtonToggleModule, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule, MatSortModule, MatTableModule, MatTooltipModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClienteComponent } from './Pages/cliente/cliente.component';
@@ -13,6 +13,9 @@ import { TableComponent } from './generics/table/table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditarComponent } from './generics/editar/editar.component';
 import { AlertComponent } from './generics/alert/alert.component';
+import { ConfiguracaoComponent } from './Pages/configuracao/configuracao.component';
+import { PermissaoComponent } from './Pages/permissao/permissao.component';
+import { PerfilComponent } from './Pages/perfil/perfil.component';
 
 
 @NgModule({
@@ -26,6 +29,9 @@ import { AlertComponent } from './generics/alert/alert.component';
     TableComponent,
     EditarComponent,
     AlertComponent,
+    ConfiguracaoComponent,
+    PermissaoComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +47,9 @@ import { AlertComponent } from './generics/alert/alert.component';
     MatIconModule,
     MatButtonModule,
     MatButtonToggleModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],

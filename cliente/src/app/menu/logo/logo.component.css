@@ -4,11 +4,27 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #4d4b4b;
+    background-color: #373636;
 }
 
-p{
+.logo{
     font-size: 18px;
     text-align: center;
     color: white;
+    padding: 0.5%;
+}
+
+.scaled{
+    width: 5.5%;
+    float: right;
+    max-width: 5.5%;
+    max-height: 70px;
+    height: 70px;
+}
+
+.user{
+    color: #99f1cd;
+    float: right;
+    margin-right: 1%;
+    padding: 0.5%;
 }

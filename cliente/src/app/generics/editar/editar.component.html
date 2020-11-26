@@ -10,10 +10,15 @@
         <input *ngIf="getType(i) == 'number'" class="input" value="{{_object ? (_object[i]): ''}}" type="number" id="i"
             (keyup)="editObject($event.target.value, i)" />
 
+        <input *ngIf="getType(i) == 'campoTexto'" class="input" value="{{_object ? (_object[i]): ''}}" type="text"
+            id="i" (keyup)="editObject($event.target.value, i)" />
 
-        <input *ngIf="getType(i) == 'campoTexto'" class="input" value="{{_object ? (_object[i]): ''}}" type="text" id="i"
-            (keyup)="editObject($event.target.value, i)" />
-
+        <select *ngIf="getType(i) == 'selecao'" class="input" type="number" id="i"
+            (click)="editObject($event.target.value, i)">
+            <option *ngFor="let opcao of _opcoes">
+                <p>{{opcao}}</p>
+            </option>
+        </select>
 
     </div>
 

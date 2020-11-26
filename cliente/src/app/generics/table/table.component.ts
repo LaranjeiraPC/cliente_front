@@ -1,13 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material';
+import { Component, Input, OnDestroy, OnInit, ɵConsole } from '@angular/core';
+import { MatDialog } from '@angular/material';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { UsuarioService } from 'src/app/Pages/usuario/service/usuario.service';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit {
+export class TableComponent implements OnInit, OnDestroy {
 
   @Input() url: string;
   @Input() data: any[] = [];
@@ -17,12 +19,25 @@ export class TableComponent implements OnInit {
   @Input() colunasEditar: any[] = [];
   @Input() atributosEditar: any[] = [];
 
+  private _permissao: boolean = false;
+
+  subscription: Subscription;
+
   constructor(
     public dialog: MatDialog,
     private rota: Router,
+    private _usuarioService: UsuarioService,
   ) { }
 
   ngOnInit(): void {
+    this.subscription = this._usuarioService.get().subscribe(data => {
+      if(data.permissao != "Leitura"){
+        this._permissao = true;
+      }else{
+        this._permissao = false;
+      }
+    });
+
   }
 
   editarRegistro(registro: any) {
@@ -36,6 +51,10 @@ export class TableComponent implements OnInit {
         }
       }
     );
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
 }

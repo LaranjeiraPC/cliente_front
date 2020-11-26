@@ -18,11 +18,14 @@ export class EditarComponent implements OnInit {
   private _url: string;
   private _campo: string;
 
+  private _opcoes: string[] = ['Administrador', 'Leitura', 'Escrita'];
+
   constructor(
     private _rota: ActivatedRoute,
     private _location: Location,
     private _service: EditarService,
-    private _usuario: UsuarioService
+    private _usuario: UsuarioService,
+    private _usuarioService: UsuarioService
   ) { }
 
   ngOnInit() {
@@ -85,11 +88,18 @@ export class EditarComponent implements OnInit {
     let campo: string = this._colunas[index];
     if(campo.indexOf('Idade') >= 0){
         return 'number';
+    } else if(campo.indexOf('Tipo') >= 0){
+      return 'selecao';
     } else return 'campoTexto'; 
 }
 
   voltar() {
-    this._location.back();
+    if(this._url == "usuario"){
+      this._usuarioService.setAutenticar(false, null, null, null);
+    }else{
+      this._location.back();
+    }
+    
   }
 
 }

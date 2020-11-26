@@ -5,7 +5,23 @@ export class Usuario{
     private _autenticado: boolean = false;
     private _status: string;
     private _message: string;
+    private _permissao: string;
+    private _image: File;
+    
+    public get image(): File {
+        return this._image;
+    }
+    public set image(value: File) {
+        this._image = value;
+    }
 
+    public get permissao(): string {
+        return this._permissao;
+    }
+    public set permissao(value: string) {
+        this._permissao = value;
+    }
+    
     public get autenticado(): boolean {
         return this._autenticado;
     }

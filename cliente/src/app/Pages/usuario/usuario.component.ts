@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/Usuario.model';
 import { UsuarioService } from './service/usuario.service';
 
@@ -15,7 +16,8 @@ export class UsuarioComponent implements OnInit {
   private _log: string;
 
   constructor(
-    private _usuarioService: UsuarioService
+    private _usuarioService: UsuarioService,
+    private _rota: Router,
   ) { }
 
   ngOnInit() {
@@ -40,14 +42,15 @@ export class UsuarioComponent implements OnInit {
         subscription.unsubscribe();
         this._user = data;
         if (this._user != null) {
-          this._usuarioService.setAutenticar(true, this._user.usuario);
+          this._usuarioService.setAutenticar(true, this._user.usuario, this._user.permissao, this._user.image);
           this._log = "";
+          this._rota.navigate(['/']);
         } else {
-          this._usuarioService.setAutenticar(false, null);
+          this._usuarioService.setAutenticar(false, null, null, null);
           this._log = "Usuário inválido";
         }
       }, error => {
-        this._usuarioService.setAutenticar(false, null);
+        this._usuarioService.setAutenticar(false, null, null, null);
         this._log = "Usuário inválido";
       });
     }

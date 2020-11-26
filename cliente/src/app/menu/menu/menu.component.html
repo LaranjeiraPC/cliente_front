@@ -1,9 +1,8 @@
-<div class="menu">
-
-    <ul>
-        <li><a [routerLink]="['']">GLASS</a></li>
+<div id="full">
+    <ul class="menu">
+        <li><a [routerLink]="['']">DASHBOARD</a></li>
         <li><a [routerLink]="['/cliente']">CLIENTE</a></li>
+        <li class="float_right"><a [routerLink]="['/configuracao']" *ngIf="_permissao" >CONFIGURAÇÃO</a></li>
         <li class="float_right"><a class="active" (click)="logout()">SAIR</a></li>
     </ul>
-
 </div>

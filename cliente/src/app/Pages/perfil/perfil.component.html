@@ -1,0 +1,16 @@
+<div class="title">
+    <p>Perfil</p>
+</div>
+
+<div class="posicao">
+    <img class=scaled src={{_perfil}} alt="perfil">
+</div>
+
+<label>
+    <input #imageInput type="file" accept="image/*" (change)="processFile(imageInput)">
+</label>
+
+<div class="botoes">
+    <button (click)="voltar()">VOLTAR</button>
+    <button (click)="salvar()">SALVAR</button>
+</div>
